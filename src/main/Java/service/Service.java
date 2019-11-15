@@ -4,7 +4,7 @@ import entity.User;
 
 public interface Service {
     User getUserByIdService(long userId);
-    boolean deleteUserByIdService(User userEntity);
-    boolean createUser(User userEntity);
-    boolean userUpdate (User userEntity);
+    boolean deleteUserByIdService(User user);
+    boolean createUser(User user);
+    boolean userUpdate (User user);
 }

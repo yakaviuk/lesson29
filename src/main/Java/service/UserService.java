@@ -10,25 +10,26 @@ public class UserService implements Service {
 
     @Override
     public User getUserByIdService(long userId){
+
         dao = new UsersDao();
         return dao.getUserById(userId);
     }
 
     @Override
-    public boolean deleteUserByIdService(User userEntity)  {
+    public boolean deleteUserByIdService(User user)  {
         dao = new UsersDao();
-        return dao.deleteUserById(userEntity);
+        return dao.deleteUserById(user);
     }
 
     @Override
-    public boolean createUser(User userEntity) {
+    public boolean createUser(User user) {
         dao = new UsersDao();
-        return dao.createUser(userEntity);
+        return dao.createUser(user);
     }
 
     @Override
-    public boolean userUpdate(User userEntity) {
+    public boolean userUpdate(User user) {
         dao = new UsersDao();
-        return dao.userUpdate(userEntity);
+        return dao.userUpdate(user);
     }
 }
