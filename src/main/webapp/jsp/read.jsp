@@ -4,7 +4,7 @@
     <title>Read information</title>
 </head>
 <body>
-<%@include file="index.jsp"%>
+<%@include file="/index.jsp"%>
 <form action="/controller" method="POST">
     <label for="user Id"><b>Enter user Id: </b></label>
     <input type="number" placeholder="user Id" name="userId" required>

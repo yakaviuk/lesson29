@@ -12,10 +12,10 @@ public class UsersDao implements UsersDaoInterface {
     User user;
 
     @Override
-    public User getUserById(long id) {
+    public User getUserById(long idUser) {
         user = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            user = session.get(User.class, id);
+            user = session.get(User.class, idUser);
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();

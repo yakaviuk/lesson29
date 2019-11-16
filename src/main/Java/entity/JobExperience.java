@@ -16,8 +16,8 @@ public class JobExperience {
     private String company;
     private String position;
 
-    @ManyToOne
-    @JoinColumn(name = "id_user")
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "id_user",referencedColumnName="id_user",insertable=false, updatable=false)
     User user; //may be "chemodan"
 
     public JobExperience(long idUser, String company, String position) {

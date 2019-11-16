@@ -20,7 +20,7 @@ public class Info {
 
 
     @OneToOne
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "id_user",insertable=false, updatable=false)
     public User user;
 
     public Info() {

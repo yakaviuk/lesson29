@@ -4,7 +4,7 @@
     <title>Home</title>
 </head>
 <body>
-<p style="text-align:center;"><a href="/"><img src="images/Screenshot_27.jpg" alt="spurs"></a></p>
+<p style="text-align:center;"><a href="/"><img src="/images/Screenshot_27.jpg" alt="spurs"></a></p>
 <p>Hello</p>
 <p> <a href="controller">Get Information about account</a></p>
 <p> <a href="controllerdel">Delete account</a></p>

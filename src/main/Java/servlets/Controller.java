@@ -20,14 +20,13 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = new User();
+        User user;
         Service service;
         if (req.getParameter("flag").equals("read")) {
             service = new UserService();
-            service.getUserByIdService(Long.parseLong(req.getParameter("userId")));
-            req.setAttribute("user", user);
+            user = service.getUserByIdService(Long.parseLong(req.getParameter("userId")));
+            req.getSession().setAttribute("user", user);
             getServletContext().getRequestDispatcher("/jsp/display.jsp").forward(req, resp);
-
         }
     }
 }
